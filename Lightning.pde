@@ -5,22 +5,25 @@ void setup()
 }
 void draw()
 {
-	slope(lineMeasureMouseX(mouseX),lineMeasureMouseX(mouseY));
-	ellipse(500,300,100,100);
+	background(255);
+	drawline();
+	fill(255);
+	ellipse(500,300,10,10);
+
 }
 int lineMeasureMouseX (int mouseofX)
 {
-	int comparedMouseX = mouseofX - 500;
-	comparedMouseX = (int)(absoluteVaule(comparedMouseX));
-	return comparedMouseX;
+	int delta = mouseofX - 500;
+	delta = (int)(absoluteVaule(delta));
+	return delta;
 }
 int lineMeasureMouseY (int mouseofY)
 {
-	int comparedMouseY = mouseofY - 300;
-	comparedMouseY = (int)(absoluteVaule(comparedMouseY));
-	return comparedMouseY;
+	int delta = mouseofY - 300;
+	delta = (int)(absoluteVaule(delta));
+	return delta;
 }
-int slope(int deltaX, int deltaY)
+int hypotonuse(int deltaX, int deltaY)
 {
 	int finalDelta;
 	finalDelta = (int)(sqrt(sq(deltaX)+sq(deltaY)));
@@ -34,8 +37,29 @@ double absoluteVaule (double num)
 	}
 	return num;
 }
-void mousePressed()
+int lightningSections(int hypotonuseNum)
 {
-
+	int sections = (int)((Math.random()*((hypotonuseNum-1)/10))+1);
+	return sections;
+}
+void lightning1()
+{
+	
+	int totalX = lineMeasureMouseX(mouseX);
+	int totalY = lineMeasureMouseY(mouseY);
+	int sections = lightningSections(hypotonuse(totalX,totalY));
+	for(int i = 0,i<sections-1,i=i+1)
+	{
+		
+	}
+}
+void drawline()
+{
+	if (mousePressed == true)
+	{
+		fill(255);
+		line(500,300,mouseX,mouseY);
+		ellipse(mouseX,mouseY,3,3);
+	}
 }
 
