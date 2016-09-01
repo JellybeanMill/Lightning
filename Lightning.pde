@@ -18,9 +18,10 @@ void setup()
 }
 void draw()
 {
-	background(0);
+	background(255);
 	drawline();
 	fill(255);
+	stroke(0);
 	ellipse(500,300,10,10);
 }
 int lineMeasureMouseX (int mouseofX)
@@ -157,8 +158,8 @@ void drawline()
 {
 	if (mousePressed == true)
 	{
-		stroke(0);
-		fill(255);
+		stroke(255);
+		fill(0);
 		line(500,300,mouseX,mouseY);
 		ellipse(mouseX,mouseY,3,3);
 		drawlightning();
@@ -221,31 +222,43 @@ void drawlightning()
 			stroke(lightningBolt1Color[0], lightningBolt1Color[1], lightningBolt1Color[2]);
 			line(lightningBolt1[i*4],lightningBolt1[(i*4)+1],lightningBolt1[(i*4)+2],lightningBolt1[(i*4)+3]);
 		}
+		fill(lightningBolt1Color[0], lightningBolt1Color[1], lightningBolt1Color[2]);
+		ellipse(lightningBolt1[(lightningBolt1.length)-2],lightningBolt1[(lightningBolt1.length)-1],5,5);
 		for(int i = 0;i<(lightningBolt2.length/4);i=i+1)
 		{
 			stroke(lightningBolt2Color[0], lightningBolt2Color[1], lightningBolt2Color[2]);
 			line(lightningBolt2[i*4],lightningBolt2[(i*4)+1],lightningBolt2[(i*4)+2],lightningBolt2[(i*4)+3]);
 		}
+		fill(lightningBolt2Color[0], lightningBolt2Color[1], lightningBolt2Color[2]);
+		ellipse(lightningBolt2[(lightningBolt2.length)-2],lightningBolt2[(lightningBolt2.length)-1],5,5);
 		for(int i = 0;i<(lightningBolt3.length/4);i=i+1)
 		{
 			stroke(lightningBolt3Color[0], lightningBolt3Color[1], lightningBolt3Color[2]);
 			line(lightningBolt3[i*4],lightningBolt3[(i*4)+1],lightningBolt3[(i*4)+2],lightningBolt3[(i*4)+3]);
 		}
+		fill(lightningBolt3Color[0], lightningBolt3Color[1], lightningBolt3Color[2]);
+		ellipse(lightningBolt3[(lightningBolt3.length)-2],lightningBolt3[(lightningBolt3.length)-1],5,5);
 		for(int i = 0;i<(lightningBolt4.length/4);i=i+1)
 		{
 			stroke(lightningBolt4Color[0], lightningBolt4Color[1], lightningBolt4Color[2]);
 			line(lightningBolt4[i*4],lightningBolt4[(i*4)+1],lightningBolt4[(i*4)+2],lightningBolt4[(i*4)+3]);
 		}
+		fill(lightningBolt4Color[0], lightningBolt4Color[1], lightningBolt4Color[2]);
+		ellipse(lightningBolt4[(lightningBolt4.length)-2],lightningBolt4[(lightningBolt4.length)-1],5,5);
 		for(int i = 0;i<(lightningBolt5.length/4);i=i+1)
 		{
 			stroke(lightningBolt5Color[0], lightningBolt5Color[1], lightningBolt5Color[2]);
 			line(lightningBolt5[i*4],lightningBolt5[(i*4)+1],lightningBolt5[(i*4)+2],lightningBolt5[(i*4)+3]);
 		}
+		fill(lightningBolt5Color[0], lightningBolt5Color[1], lightningBolt5Color[2]);
+		ellipse(lightningBolt5[(lightningBolt5.length)-2],lightningBolt5[(lightningBolt5.length)-1],5,5);
 		for(int i = 0;i<(lightningBolt6.length/4);i=i+1)
 		{
 			stroke(lightningBolt6Color[0], lightningBolt6Color[1], lightningBolt6Color[2]);
 			line(lightningBolt6[i*4],lightningBolt6[(i*4)+1],lightningBolt6[(i*4)+2],lightningBolt6[(i*4)+3]);
 		}
+		fill(lightningBolt6Color[0], lightningBolt6Color[1], lightningBolt6Color[2]);
+		ellipse(lightningBolt6[(lightningBolt6.length)-2],lightningBolt6[(lightningBolt6.length)-1],5,5);
 	}
 }
 int findQuadrant(int mouseofX, int mouseofY)
