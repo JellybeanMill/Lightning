@@ -178,7 +178,6 @@ void drawline()
 }
 void drawlightning()
 {
-	println(counter);
 	counter = counter + 1;
 	finalCounter = finalCounter+1;
 	if (counter == 10)
