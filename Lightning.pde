@@ -23,6 +23,12 @@ void draw()
 	fill(255);
 	stroke(0);
 	ellipse(500,300,10,10);
+	line(497,300,503,300);
+	line(500,297,500,303);
+	ellipse(6,300,10,10);
+	ellipse(500,6,10,10);
+	ellipse(994,300,10,10);
+	ellipse(500,594,10,10);
 }
 int lineMeasureMouseX (int mouseofX)
 {
@@ -68,8 +74,8 @@ int[] lightning()
 	int yFreedom;
 	if (sections > 1)
 	{
-		xFreedom = (int)(((totalX/sections)*(2))/(sections-1));
-		yFreedom = (int)(((totalY/sections)*(2))/(sections-1));
+		xFreedom = (int)(((totalX/sections)*(5))/(sections-1));
+		yFreedom = (int)(((totalY/sections)*(5))/(sections-1));
 	}
 	else
 	{
@@ -181,37 +187,37 @@ void drawlightning()
 {
 	counter = counter + 1;
 	finalCounter = finalCounter+1;
-	if (counter == 10)
+	if (counter == 1)
 	{
 		lightningBolt1 = lightning();
 		lightningBolt1Color = colorFinding();
 	}
-	else if (counter == 20)
+	else if (counter == 2)
 	{
 		lightningBolt2 = lightning();
 		lightningBolt2Color = colorFinding();
 	}
-	else if (counter == 30)
+	else if (counter == 3)
 	{
 		lightningBolt3 = lightning();
 		lightningBolt3Color = colorFinding();
 	}
-	else if (counter == 40)
+	else if (counter == 4)
 	{
 		lightningBolt4 = lightning();
 		lightningBolt4Color = colorFinding();
 	}
-	else if (counter == 50)
+	else if (counter == 5)
 	{
 		lightningBolt5 = lightning();
 		lightningBolt5Color = colorFinding();
 	}
-	else if (counter == 60)
+	else if (counter == 6)
 	{
 		lightningBolt6 = lightning();
 		lightningBolt6Color = colorFinding();
 	}
-	else if (counter > 60)
+	else if (counter > 6)
 	{
 		counter = 0;
 	}
